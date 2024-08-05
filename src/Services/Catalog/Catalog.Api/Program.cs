@@ -7,9 +7,9 @@ builder.Services.AddMediatR(config=>
     config.RegisterServicesFromAssembly(typeof(Program).Assembly);
 }); //handle the business logic of the command handlers
 
-builder.Services.AddMarten(options =>
+builder.Services.AddMarten(opts =>
 {
-    options.Connection(builder.Configuration.GetConnectionString("Database")!);
+    opts.Connection(builder.Configuration.GetConnectionString("Database")!);
 }).UseLightweightSessions();
 
 var app = builder.Build();
