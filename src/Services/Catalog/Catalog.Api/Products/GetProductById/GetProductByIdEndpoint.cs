@@ -1,7 +1,4 @@
-﻿
-using Catalog.Api.Products.GetProducts;
-
-namespace Catalog.Api.Products.GetProductById
+﻿namespace Catalog.Api.Products.GetProductById
 {
     //public record GetProductByIdRequest();
     public record GetProductByIdResponse(Product Product);
