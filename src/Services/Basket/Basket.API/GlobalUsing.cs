@@ -9,4 +9,7 @@ global using Mapster;
 global using Marten;
 global using MediatR;
 global using Basket.API.Data;
+global using BuildingBlocks.Exceptions.Handler;
+global using HealthChecks.UI.Client;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
