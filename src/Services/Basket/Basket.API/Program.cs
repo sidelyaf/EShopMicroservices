@@ -1,4 +1,5 @@
 using Discount.Grpc;
+using BuildingBlocks.Messaging.MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,9 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
     //options.InstanceName = "Basket";
 });
+
+//Async Communication Services
+builder.Services.AddMessageBroker(builder.Configuration);
 
 //GRPC services
 builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options =>
